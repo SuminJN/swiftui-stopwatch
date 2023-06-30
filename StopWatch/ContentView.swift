@@ -1,26 +1,54 @@
-//
-//  ContentView.swift
-//  StopWatch
-//
-//  Created by 전수민 on 2023/06/30.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+            
+            Text("00:00.00")
+                .font(.system(size: 70))
+            
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                Button {
+                    
+                } label: {
+                    Text("랩")
+                        .frame(width: 80, height: 80)
+                        .foregroundColor(Color.white)
+                        .background(Color.gray)
+                        .clipShape(Circle())
+                }
+                
+                Spacer()
+                
+                Button {
+                    
+                } label: {
+                    Text("시작")
+                        .frame(width: 80, height: 80)
+                        .foregroundColor(Color.white)
+                        .background(Color.green)
+                        .clipShape(Circle())
+                }
+                
+                Spacer()
+            }
+            
+            Spacer()
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
